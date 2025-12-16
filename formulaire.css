@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+ body{
+    background-image: linear-gradient(rgba(7, 62, 138, 0.563),white);
+ }
+ .retour{
+    margin-left: 30px;
+     margin-top: 50px;
+        }
+#back{
+     color:var(--color-secondary) ;
+            
+    }
+form{
+    /* border-radius: 20px; */
+    border: 3px solid rgba(202, 197, 197, 0.962); 
+    padding: 2%;
+    width: 50vw;
+    height: 80vh;
+    margin: 2% auto;
+    /* background-color: rgba(0, 0, 255, 0.262); */
+     background-color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.envellope{
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+.formulaire{
+   
+    display: flex;
+    justify-content: space-around;
+    /* gap: 30ch;*/
+} 
+   
+.formulaire button{
+     border: none;
+    height: 40px;
+    border-radius: 4px;
+    background-color: rgba(7, 61, 138, 0.971);
+    color: white;
+    margin: 200px 20px 0 20px;
+    width: 150px;
+}
+ .second,
+ .first{
+    padding-inline: 15px;
+    width: 50vw;
+ }
+input{
+    border: 2px solid rgb(4, 20, 70);
+    border-radius: 4px;
+    width: 100%;
+    height: 10%;
+    margin-block: 20px;
+    padding-left: 10px;
+    background-color: rgba(202, 197, 197, 0.333);
+}
+textarea{
+    width: 100%;
+    height: 50%;
+    margin-block: 20px;
+    padding-left: 10px;
+    background-color: rgba(202, 197, 197, 0.333);
+     border: 2px solid rgb(4, 20, 70);
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
