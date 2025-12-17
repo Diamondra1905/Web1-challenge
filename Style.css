@@ -7,11 +7,9 @@
     --color-secondary:rgb(7, 7, 133);
 }
 header{
-    /* background-color: rgba(226, 225, 225, 0.532); */
     background-image: radial-gradient(rgba(226, 225, 225, 0.532),white);
-    width: 100vw;
+    /* width: 100vw; */
     height: 1000px;
-   
 }
 nav img{
     width: 70px;
@@ -33,7 +31,6 @@ nav{
 .dropdown{
     display: none;
     position: absolute;
-    /* background-color: #f9f9f9; */
     width: 65px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: -22px 16px;
@@ -45,11 +42,8 @@ nav{
     height: 20px;
     background-color: transparent;
     border-radius: 20px;
-  
 }
 .long {
-   
-    /* function adding */
     position: relative;
     display: inline-block;
 }
@@ -76,16 +70,10 @@ nav{
   text-decoration: none;
   display: block;
 }
-
-/* Change color of dropdown links on hover */
 .droplink  a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu on hover */
 .long:hover .droplink {
   display: block;
 }
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
 .long:hover .dropbtn {
   background-color:  var(--color-secondary);
   color: white;
@@ -114,7 +102,6 @@ nav{
     width: 120px;
     height:40px;
     border: none;
-    /* color: white; */
     box-shadow: 2px 2px 5px black;
     border-radius: 20px;
     background-color: var(--color-primary);
@@ -131,7 +118,6 @@ nav{
     max-width: 800px;
     }
 .contenu{
-    /* margin-bottom: 40px; */
     position: relative;
      padding: 50px 250px;
 }
@@ -141,9 +127,7 @@ nav{
     font-weight: bolder;
     text-transform: uppercase;
     letter-spacing: 10px;
-    line-height: 0.85; /* Réduit l'espace vertical */
-     /* COLLÉ À L'IMAGE */
-    /* margin-top: -25px; */
+    line-height: 0.85;
     margin-top: -50px;
     text-shadow: 
             3px 3px 0 var(--color-secondary)
@@ -159,9 +143,6 @@ nav{
     left: 0;
     right: 0;
     height: 50%;
-    /* background: linear-gradient(to bottom, 
-            rgba(255,255,255,0.4) 0%, 
-            rgba(255,255,255,0) 100%); */
     pointer-events: none;
     border-radius: 10px;
     }
@@ -169,8 +150,6 @@ nav{
     width: 300px;
     height: 300px;
     display: block;
-     /* -35px COLLE l'image au texte */
-     /* margin: 0 auto -35px auto; */
      margin: 0 auto -350px 450px;
     position: relative;
     z-index: 10;
@@ -185,8 +164,6 @@ nav{
     width: 120px;
     height: 120px;
     display: block;
-     /* -35px COLLE l'image au texte */
-     /* margin: 0 auto -35px auto; */
      margin: 0 auto -50px 50px;
     position: sticky;
     z-index: 10;
@@ -205,8 +182,6 @@ nav{
                 transform: translateY(5px) rotate(240deg) scale(0.95);
             }
         }
-
-
 .background img{
     width: 700px;
     margin-top: 50px;
@@ -214,16 +189,11 @@ nav{
     margin-left: 400px;
     animation: imag 3s ease-in-out;
 }
-/* est que c'esst possible d'utiliser cet proprité en keyframes  */
 @keyframes imag {
    0%{transform: translateY(0px);}
    100%{ transform: translateY(30px);}
-
  }
-
- /* part2 */
  .partone{
-    /* background-color: var(--color-primary); */
     background-color: rgba(226, 225, 225, 0.532);
     display: flex;
     justify-content: center;
@@ -271,7 +241,6 @@ nav{
     border: 2px solid var(--color-secondary);
     color: var(--color-secondary);
  }
-
  .one:hover{
     background-color: var(--color-secondary);
     color: white;
@@ -280,13 +249,10 @@ nav{
     background-color: var(--color-secondary);
     color: white;
  }
-
- /* Part three */
  .parttwo{
     display: flex;
     justify-content: space-between;
  }
-
  .subtitle{
     width: 50vh;
     display: block;
@@ -307,11 +273,8 @@ nav{
     display: flex;
     justify-content: center;
     margin-top: 5%;
-    
-    /* border: 1px solid var(--color-secondary); */
  }
  .bouttonimage button{
-    /* border: 1px solid blue; */
     width: 20%;
     height: 20%;
     border: none;
@@ -321,14 +284,10 @@ nav{
     height: 100%;
     width: 100%;
  }
-
- /* parttwo1 */
-
  @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Courgette&family=Dancing+Script:wght@400..700&family=Days+One&family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
  .parttwo1 {
     margin: 5% 15%;
  }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -336,46 +295,29 @@ nav{
     perspective: 1000px;
     transform-style: preserve-3d;
 }
-
 .front {
     transform-style: preserve-3d;
     backface-visibility: hidden;
-    /*transform: rotateX(0deg);
-    height: 100%;
-    transition: transform 0.5s;*/
 }
-
 .back {
     display: none;
     transform-style: preserve-3d;
     backface-visibility: hidden;
     margin: 5% 15%;
-
 }
-
 .container1 {
     display: flex;
     justify-content: space-between;
 }
-
 .bleu {
     color: rgb(0, 0, 154);
 }
-
-/*header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}*/
-
 .logo {
     width: 50vh;
     display: block;
     justify-content: center;
     align-items: baseline;
 }
-
 .logo h1 {
     font-size: 48px;
     color: red;
@@ -383,20 +325,16 @@ nav{
     margin: 0;
     font-family:"Days One", sans-serif;
     align-items: baseline;
-    
 }
-
 .pizza-logo {
     width: 60px;
     height: auto;
 }
-
 .header-options {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-
 .header-options button {
     background-color: transparent;
     border: 2px solid #000;
@@ -404,19 +342,16 @@ nav{
     border-radius: 20px;
     cursor: pointer;
 }
-
 .tagline {
     text-align: center;
     margin-bottom: 40px;
     width: 50vh;
     gap: 10px;
 }
-
 .tagline p {
     font-size: 16px;
     color: #000;
 }
-
 .pizza-menu {
     display: flex;
     justify-content: space-between;
@@ -424,7 +359,6 @@ nav{
     margin-bottom: 40px;
     margin-top: 3%;
 }
-
 .titre {
     display: flex;
     justify-content: center;
@@ -434,15 +368,11 @@ nav{
     padding: 2% 0;
     border-radius: 10px;
     color: var(--color-secondary);
-    
 }
-
 .titre:hover {
     background-color: var(--color-secondary);
     color: #fff;
-    
 }
-
 .pizza-card {
     background-color: #fff;
     border-radius: 10px;
@@ -451,12 +381,10 @@ nav{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 250px;
 }
-
 .pizza-card h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
-
 .pizza-card img {
     width: 180px;
     height: 180px;
@@ -464,14 +392,12 @@ nav{
     border-radius: 50%;
     margin-bottom: 20px;
 }
-
 .quantity-selector {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 15px;
 }
-
 .quantity-selector button {
     width: 30px;
     height: 30px;
@@ -480,12 +406,10 @@ nav{
     cursor: pointer;
     font-size: 18px;
 }
-
 .quantity-selector .quantity {
     margin: 0 10px;
     font-size: 18px;
 }
-
 .add-to-cart {
     background-color:var(--color-secondary);
     color: #fff;
@@ -495,7 +419,6 @@ nav{
     cursor: pointer;
     font-size: 16px;
 }
-
 .see-all-bouton {
     display: block;
     width: fit-content;
@@ -507,7 +430,6 @@ nav{
     font-size: 18px;
     background: white;
 }
-
 .back-bouton {
     display: none;
     width: fit-content;
@@ -519,151 +441,130 @@ nav{
     font-size: 18px;
     background: white;
 }
-
 #toggleSections:checked ~ .back {
     display: block;
 }
-
 #toggleSections:checked ~ .see-all-bouton {
     display: none;
 }
-
 #toggleSections:checked ~ .back .back-bouton {
     display: block;
 }
-
-/* quatrième parti */
- .retour{
-            margin-left: 30px;
-            margin-top: 50px;
-        }
-        #back{
-            color:var(--color-secondary) ;
-            
-        }
-        .contenu2{
-            display: flex;
-            justify-content: space-between;
-            gap: 20ch;
-            padding: 100px 100px;
-            background-image: linear-gradient(white,rgba(0, 0, 255, 0.145));
-        }
-        .contenu2 img{
-            width: 600px;
-            aspect-ratio: 1/0.5;
-            border: none;
-            border-radius: 20px; 
-            /* mask-image: linear-gradient(transparent,white); */
-            
-        } 
-        h2 span{
-            color: var(--color-secondary);
-        }
-        .partie2{
-            width: 500px;
-            aspect-ratio: 1/0.5;
-            padding: 10px 50px;
-        }
-        .partie2 h2{
-           font-weight: bold;
-           font-size: 20px;
-        }
-        .partie2 p{
-           text-align: justify;
-           padding-top: 50px;
-           line-height: 1.5;
-        }
-        .boutton2 button{
-            padding: 5px 20px;
-            /* background-image: linear-gradient(rgb(10, 10, 172),rgb(109, 50, 50)); */
-            background-image: radial-gradient(var(--color-secondary),rgb(109, 50, 50));
-            width: 150px;
-            aspect-ratio: 1/0.25;
-            border-radius: 20px;
-            border: none;
-            color: white;
-            text-transform: uppercase;
-            margin: 100px 0;
-            cursor: pointer;
-            transition: 2s;
-        }
-        .boutton2 a{
-            color: white;
-            list-style: none;
-            text-decoration: none;
-        }
-        .boutton2 button:hover{
-            color: rgb(253, 248, 248);
-            width: 200px;
-        }
-        section h1{
-            position: relative;
-             /* top: 2450px;  */
-        }
-       .titrelogo {
-        font-size: 4rem;
-        font-family: 'Arial Black', sans-serif;
-        /* display: flex; */
-        justify-content: center;
-        /* gap: 5px; */
-        position: absolute;
-        text-align: center;
-        left: 450px;
-        /* top: 450px; */
-        margin-bottom: 30%;
-        }
-        .bleu2 {
-            color: rgb(0, 0, 136);
-            }
-        .rouge2 {
-            color: red;
-        }
-
-        .titrelogo span {
-        display: inline-block;
+.retour{
+    margin-left: 30px;
+    margin-top: 50px;
+}
+#back{
+    color:var(--color-secondary) ;
+}
+.contenu2{
+    display: flex;
+    justify-content: space-between;
+    gap: 20ch;
+    padding: 100px 100px;
+    background-image: linear-gradient(white,rgba(0, 0, 255, 0.145));
+}
+.contenu2 img{
+    width: 600px;
+    aspect-ratio: 1/0.5;
+    border: none;
+    border-radius: 20px; 
+} 
+h2 span{
+    color: var(--color-secondary);
+}
+.partie2{
+    width: 500px;
+    aspect-ratio: 1/0.5;
+    padding: 10px 50px;
+}
+.partie2 h2{
+   font-weight: bold;
+   font-size: 20px;
+}
+.partie2 p{
+   text-align: justify;
+   padding-top: 50px;
+   line-height: 1.5;
+}
+.boutton2 button{
+    padding: 5px 20px;
+    background-image: radial-gradient(var(--color-secondary),rgb(109, 50, 50));
+    width: 150px;
+    aspect-ratio: 1/0.25;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    margin: 100px 0;
+    cursor: pointer;
+    transition: 2s;
+}
+.boutton2 a{
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+.boutton2 button:hover{
+    color: rgb(253, 248, 248);
+    width: 200px;
+}
+section h1{
+    position: relative;
+}
+.titrelogo {
+    font-size: 4rem;
+    font-family: 'Arial Black', sans-serif;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    left: 450px;
+    margin-bottom: 30%;
+}
+.bleu2 {
+    color: rgb(0, 0, 136);
+}
+.rouge2 {
+    color: red;
+}
+.titrelogo span {
+    display: inline-block;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: titre 10s forwards infinite;
+}
+.titrelogo span:nth-child(1) { animation-delay: 0s; }
+.titrelogo span:nth-child(2) { animation-delay: 0.5s; }
+.titrelogo span:nth-child(3) { animation-delay: 1s; }
+.titrelogo span:nth-child(4) { animation-delay: 1.5s; }
+.titrelogo span:nth-child(5) { animation-delay: 2s; }
+.titrelogo span:nth-child(6) { animation-delay: 2.5s; }
+.titrelogo span:nth-child(7) { animation-delay: 3s; }
+.titrelogo span:nth-child(8) { animation-delay: 3.5s; }
+.titrelogo span:nth-child(9) { animation-delay: 4s; }
+.titrelogo span:nth-child(10){ animation-delay: 4.5s; }
+.titrelogo span:nth-child(11){ animation-delay: 5s; }
+@keyframes titre {
+    0% {
         opacity: 0;
-        transform: scale(0.5);
-        animation: titre 10s forwards infinite;
-        }
-
-        /* Animation avec délai progressif pour chaque lettre */
-        .titrelogo span:nth-child(1) { animation-delay: 0s; }
-        .titrelogo span:nth-child(2) { animation-delay: 0.5s; }
-        .titrelogo span:nth-child(3) { animation-delay: 1s; }
-        .titrelogo span:nth-child(4) { animation-delay: 1.5s; }
-        .titrelogo span:nth-child(5) { animation-delay: 2s; }
-        .titrelogo span:nth-child(6) { animation-delay: 2.5s; }
-        .titrelogo span:nth-child(7) { animation-delay: 3s; }
-        .titrelogo span:nth-child(8) { animation-delay: 3.5s; }
-        .titrelogo span:nth-child(9) { animation-delay: 4s; }
-        .titrelogo span:nth-child(10){ animation-delay: 4.5s; }
-        .titrelogo span:nth-child(11){ animation-delay: 5s; }
-
-        @keyframes titre {
-        0% {
-            opacity: 0;
-            transform: scale(0.5) rotate(-20deg);
-        }
-        50% {
-            opacity: 1;
-            transform: scale(1.2) rotate(10deg);
-        }
-        100% {
-            opacity: 1;
-            transform: scale(1) rotate(0deg);
-        }
-        }
-
-        /* cinquième */
-
-        .banner {
+        transform: scale(0.5) rotate(-20deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+.banner {
     width: 100%;
     height: 100vh;
     text-align: center;
     overflow: hidden;
     position: relative;
 }
-
 .banner .slider {
     position: absolute;
     width: 200px;
@@ -675,13 +576,13 @@ nav{
     animation: autoRun 20s linear infinite;
 }
 @keyframes autoRun{
-  from {
-    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
-  }to{
-    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
-  }
+    from {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }
+    to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
 }
-
 .banner .slider .item {
     position: absolute;
     inset: 0;
@@ -690,130 +591,100 @@ nav{
         translateZ(550px);
         z-index: 20;
 }
-
 .banner .slider .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 .banner .content {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(1400px, 100vw); /* ← corrigé */
-  height: max-content;
-  padding-bottom: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
 }
-
-/* TITRE EXTRA PIZZA */
 .banner  h3 {
-  font-family: Fredoka;
-  font-size: 5em;
-  line-height: 1em;
-  color: red;
-  position: absolute;
-  bottom: 170px;
-  left: 550px;
-  
+    font-family: Fredoka;
+    font-size: 5em;
+    line-height: 1em;
+    color: red;
+    position: absolute;
+    bottom: 170px;
+    left: 550px;
 }
-
-/* CORRECTION ICI : PAS D’ESPACE AVANT ::after */
 .banner .content h3::after {
-  position: absolute;
-  inset: 0 0 0 0;
-  content: attr(data-content);
-  z-index: 2;
-  -webkit-text-stroke: 2px white;
-  color: transparent;
-  z-index: 10;
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    z-index: 10;
 }
-
-/* TEXTE A DROITE */
 .banner .content .author {
-  font-family: Poppins;
-  text-align: right;
-  max-width: 200px;
+    font-family: Poppins;
+    text-align: right;
+    max-width: 200px;
 }
-
-/* 'TACOS, PIZZA...' */
 .banner .content h4 {
-  font-size: 3em;
+    font-size: 3em;
 }
-
-/* IMAGE BURGER */
 .banner .content .model {
-  width: 100%;
-  height: 75vh;
-  position: absolute;
-  bottom: 0;
-  left: 66;
-  background-size: auto 130%;
-  background-repeat: no-repeat;
-  background-position: top center;
-  z-index: 5;
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 66;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 5;
 }
 .banner {
-  /* background-image: url(ProImage/place2.jpg); */
-  background-color: #fcfcf9;
+    background-color: #fcfcf9;
 }
-/* 1 — Le slider doit être AU-DESSUS du texte */
 .banner .slider {
-  position: relative;
-  z-index: 1000;  /* Passe devant le texte */
+    position: relative;
+    z-index: 1000;
 }
-
-/* 2 — Le texte du milieu doit être en dessous du slider */
 .middle-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;   /* En dessous du slider */
-
-  font-family: Archivo, sans-serif;
-  font-size: 3em;
-  color: rgb(16, 16, 16);
-  text-align: center;
-  font-weight: bold;
-  pointer-events: none;
-  text-shadow: 0 0 8px black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-family: Archivo, sans-serif;
+    font-size: 3em;
+    color: rgb(16, 16, 16);
+    text-align: center;
+    font-weight: bold;
+    pointer-events: none;
+    text-shadow: 0 0 8px black;
 }
-
-/* 3 — EXTRA PIZZA doit rester AU-DESSUS de tout */
-/* .banner h3 {
-  position: relative;
-  font-size: 2em;
-  z-index: 10000; /* Plus haut que les images */
-
 .item img{
     border-radius: 20px;
 }
-
-
-/* fin de code  */
 .commentaire {
-    background-color: rgba(53, 53, 53, 0.384);
+    background-color: rgba(181, 181, 181, 0.384);
 }
-
 .card {
     display: flex;
     justify-content: center;
     gap: 5%;
     height: 80vh;
-   
-
-} .petit{
+} 
+.petit{
     text-align: center;
     font-size: medium;
     font-weight: bolder;
 }
-
 .card1 {
     background-color: rgb(29, 29, 148);
     width: 30vh;
@@ -826,9 +697,7 @@ nav{
     text-align: justify;
     padding: 1% 2%;
     transform: rotateZ(20deg);
-    
 } 
-
 .card2 {
     background-color: red;
     width: 30vh;
@@ -842,7 +711,6 @@ nav{
     padding: 1% 2%;
     transform: rotateZ(-5deg);
 }
-
 .card3 {
     background-color: rgb(29, 29, 148);
     width: 30vh;
@@ -860,16 +728,14 @@ nav{
     width: 15vw;
     height: 20vh;
 }
-
 @keyframes spin {
     from{translate: 0;}
     to {translate:-100%;}
 }
-
 .coms{
     width: 90%;
     margin: auto;
-    background-color: white;
+    background-color: rgb(90, 90, 164);
     position: absolute;
     right: 5%;
     margin-top: -12%;
@@ -892,7 +758,6 @@ nav{
     padding:  25px;
     border-radius: 10px;
 } 
-
 .each-coms {
     display: flex;
     gap: 1em;
@@ -900,7 +765,6 @@ nav{
     justify-content: center;
     padding: 20px;
     animation: spin 20s infinite linear ;
-    
 }
 .nom{
     display: flex;
@@ -908,7 +772,6 @@ nav{
     gap: 2ch;
     margin-top: 12px;
     align-items: center;
-    /* padding: 2% ; */
 }
 .nom img{
     width: 10%;
@@ -920,7 +783,6 @@ nav{
     flex-direction: column;
 }
 .client text p{
-    /* gap: 2ch; */
     font-weight: bolder;
     font-size: 5px;
 }
@@ -938,8 +800,6 @@ nav{
     50%{transform: scale(1.1);}
     100%{transform: scale(1);}
 }
-
-/* fin de footer */
 .contenair5{
     display: flex;
     justify-content: center;
@@ -953,11 +813,439 @@ nav{
     justify-content: center;
     gap: 5ch;
     margin: 5%;
-
 }
-/* .reseaux {
-    margin-block: 2%;
-} */
+footer {
+    background-color: rgba(181, 181, 181, 0.384);
+    color: #050505;
+    padding: 200px 20px 50px 20px;
+    font-family: Arial, sans-serif;
+}
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20ch;
+    align-items: center;
+}
+.logo {
+    font-size: 28px;
+    color: var(--color-secondary);
+}
+.logo span {
+    color: #ff2a2a;
+}
+.footer-box h3 {
+    margin-bottom: 15px;
+    color: #121212;
+}
+.footer-box p {
+    line-height: 1.6;
+    text-align: justify;
+}
+.footer-box ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-box ul li {
+    margin-bottom: 10px;
+}
+.footer-box a {
+    color: #0b0b0b;
+    text-decoration: none;
+}
+.footer-box a:hover {
+    color: #ff2a2a;
+}
+.map-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ff2a2a;
+    font-weight: bold;
+}
+.socials a {
+    font-size: 22px;
+    margin-right: 12px;
+    display: inline-block;
+}
+.footer-bottom {
+    border-top: 1px solid #111010;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 50px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#facebook {
+    color: #0491fd;
+    font-size: 28px;
+}
+#linkedin{
+    color: #048ffa;
+    font-size: 28px;
+}
+#instagram {
+    color: #FFD43B;
+    font-size: 28px;
+}
+#tiktok{
+    color: rgb(18, 18, 18);
+    font-size: 28px;
+}
 
+/* ==================== RESPONSIVE DESIGN ==================== */
 
+/* Tablettes (768px à 1024px) */
+@media screen and (max-width: 1024px) {
+    header {
+        height: auto;
+        min-height: 800px;
+    }
+    .contenu {
+        padding: 50px 100px;
+    }
+    .pizza {
+        font-size: 200px;
+        margin-top: -30px;
+    }
+    .slice {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto -280px 350px;
+    }
+    .logofirst {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto -40px 30px;
+    }
+    .background img {
+        width: 500px;
+        margin-left: 200px;
+    }
+    .partone {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 30px;
+    }
+    .contenair1, .contenair2 {
+        width: 100%;
+        text-align: center;
+    }
+    .contenair1 img {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .parttwo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .subtitle {
+        width: 80%;
+        text-align: center;
+        padding: 5%;
+    }
+    .bouttonimage {
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .bouttonimage button {
+        width: 30%;
+    }
+    .parttwo1 {
+        margin: 5% 5%;
+    }
+    .pizza-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    .pizza-card {
+        width: 220px;
+    }
+    .contenu2 {
+        flex-direction: column;
+        gap: 50px;
+        padding: 50px 30px;
+        text-align: center;
+    }
+    .contenu2 img {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .partie2 {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .banner .content h3 {
+        font-size: 3em;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 120px;
+        text-align: center;
+    }
+    .banner .slider {
+        transform: perspective(800px) rotateX(-16deg);
+    }
+    .banner .slider .item {
+        transform: 
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(400px);
+    }
+    .card {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        padding: 20px;
+    }
+    .card1, .card2, .card3 {
+        width: 80%;
+        max-width: 300px;
+        margin: 20px auto;
+        transform: none;
+    }
+    .coms {
+        position: relative;
+        margin: 20px auto;
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .coms1 {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    .titrelogo {
+        font-size: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        margin-bottom: 20%;
+    }
+}
 
+/* Mobiles (480px à 767px) */
+@media screen and (max-width: 767px) {
+    nav {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 20px;
+    }
+    .btn1 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .contenu {
+        padding: 30px 20px;
+    }
+    .pizza {
+        font-size: 120px;
+        letter-spacing: 5px;
+        margin-top: -20px;
+    }
+    .slice {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto -200px 150px;
+    }
+    .logofirst {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto -30px 20px;
+    }
+    .background img {
+        width: 100%;
+        max-width: 300px;
+        margin: 30px auto;
+        display: block;
+    }
+    .order, .dropbtn {
+        width: 80px;
+        font-size: 12px;
+    }
+    .one, .two {
+        width: 120px;
+        height: 40px;
+        font-size: 14px;
+    }
+    .container1 {
+        flex-direction: column;
+    }
+    .logo h1 {
+        font-size: 36px;
+    }
+    .pizza-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    .pizza-card {
+        width: 90%;
+        max-width: 300px;
+    }
+    .titrelogo {
+        font-size: 2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        margin-bottom: 20%;
+    }
+    .banner {
+        height: 70vh;
+    }
+    .banner .slider {
+        width: 150px;
+        height: 200px;
+        left: calc(50% - 75px);
+    }
+    .banner .slider .item {
+        transform: 
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(250px);
+    }
+    .banner .content h3 {
+        font-size: 2em;
+        bottom: 80px;
+    }
+    .middle-text {
+        font-size: 1.8em;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    .footer-box p {
+        text-align: center;
+    }
+}
+
+/* Petits mobiles (moins de 480px) */
+@media screen and (max-width: 480px) {
+    .pizza {
+        font-size: 80px;
+        letter-spacing: 3px;
+    }
+    .slice {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto -130px 100px;
+    }
+    .contenu {
+        padding: 20px 10px;
+    }
+    .dropdown {
+        width: 50px;
+    }
+    .long:hover .dropdown {
+        width: 50px;
+    }
+    .partone, .parttwo1 {
+        padding: 20px 15px;
+    }
+    .subtitle {
+        width: 95%;
+        padding: 10px;
+    }
+    .bouttonimage button {
+        width: 40%;
+    }
+    .banner .slider {
+        width: 120px;
+        height: 160px;
+        left: calc(50% - 60px);
+    }
+    .banner .slider .item {
+        transform: 
+            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+            translateZ(200px);
+    }
+    .banner .content h3 {
+        font-size: 1.5em;
+        bottom: 60px;
+    }
+    .middle-text {
+        font-size: 1.3em;
+    }
+    footer {
+        padding: 100px 15px 30px 15px;
+    }
+    .socials a {
+        font-size: 20px;
+        margin-right: 8px;
+    }
+    .titrelogo {
+        font-size: 2rem;
+        margin-bottom: 15%;
+    }
+}
+
+/* Grands écrans (plus de 1440px) */
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+    .contenu {
+        padding: 50px 300px;
+    }
+    .background img {
+        width: 800px;
+        margin-left: 500px;
+    }
+}
+
+/* Orientation paysage sur mobiles */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    header {
+        height: auto;
+        min-height: 600px;
+    }
+    .contenu {
+        padding: 20px 50px;
+    }
+    .pizza {
+        font-size: 100px;
+        margin-top: -15px;
+    }
+    .slice {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto -160px 200px;
+    }
+    .banner {
+        height: 80vh;
+    }
+}
+
+/* Améliorations pour le touch sur mobiles */
+@media (hover: none) and (pointer: coarse) {
+    .long:hover .dropdown,
+    .long:hover .droplink {
+        display: none;
+    }
+    .long:active .dropdown,
+    .long:active .droplink {
+        display: block;
+    }
+    .order, .dropbtn, .one, .two {
+        min-height: 44px;
+    }
+}
+
+/* Correction pour éviter les débordements horizontaux */
+@media screen and (max-width: 1024px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    header, .partone, .parttwo, .parttwo1, .contenu2, .banner, footer {
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+    }
+}
