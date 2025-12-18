@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Formulaire de Commande</title>
+    <style>
+        :root {
+            --color-primary: #073e8a;
+            --color-primary-light: rgba(7, 62, 138, 0.1);
+            --color-secondary: #4a6fa5;
+            --color-success: #28a745;
+            --color-danger: #dc3545;
+            --color-warning: #ffc107;
+            --color-info: #17a2b8;
+            --color-light: #f8f9fa;
+            --color-dark: #343a40;
+            --color-border: #ced4da;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.15);
+            --radius: 10px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--color-primary), #6a8bc5, #a0c1f1);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .retour {
+            margin-bottom: 25px;
+        }
+
+        .btn-retour {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius);
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-retour:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateX(-5px);
+        }
+
+        form {
+            background-color: white;
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        form:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--color-primary-light);
+        }
+
+        .form-header h1 {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--color-secondary);
+            font-size: 1.1rem;
+        }
+
+        .envellope {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .form-section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .form-section h2 {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--color-primary-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--color-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .input-icon, .textarea-icon {
+            position: relative;
+        }
+
+        .input-icon i, .textarea-icon i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--color-border);
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+
+        .textarea-icon i {
+            top: 20px;
+            transform: none;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px 45px 15px 15px;
+            border: 2px solid var(--color-border);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+            background-color: var(--color-light);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            background-color: white;
+            box-shadow: 0 0 0 3px rgba(7, 62, 138, 0.2);
+        }
+
+        input:focus + i, textarea:focus + i {
+            color: var(--color-primary);
+        }
+
+        input:valid:not(:placeholder-shown) + .validation-icon {
+            color: var(--color-success);
+        }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .formulaire {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .formulaire button {
+            border: none;
+            padding: 16px 35px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-width: 200px;
+        }
+
+        .btn-submit {
+            background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+            color: white;
+            box-shadow: 0 4px 10px rgba(7, 62, 138, 0.3);
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(7, 62, 138, 0.4);
+        }
+
+        .btn-cancel {
+            background-color: var(--color-light);
+            color: var(--color-danger);
+            border: 2px solid var(--color-border);
+        }
+
+        .btn-cancel:hover {
+            background-color: #f1f3f5;
+            transform: translateY(-3px);
+        }
+
+        .btn-cancel a {
+            color: var(--color-danger);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .form-footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+            color: var(--color-secondary);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* Animation pour les champs */
+        .input-group {
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .first .input-group:nth-child(1) { animation-delay: 0.1s; }
+        .first .input-group:nth-child(2) { animation-delay: 0.2s; }
+        .first .input-group:nth-child(3) { animation-delay: 0.3s; }
+        .first .input-group:nth-child(4) { animation-delay: 0.4s; }
+        .second .input-group:nth-child(1) { animation-delay: 0.5s; }
+        .second .input-group:nth-child(2) { animation-delay: 0.6s; }
+        .second .input-group:nth-child(3) { animation-delay: 0.7s; }
+        .second .input-group:nth-child(4) { animation-delay: 0.8s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .envellope {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .form-section {
+                min-width: 100%;
+            }
+            
+            form {
+                padding: 25px;
+            }
+            
+            .form-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .formulaire button {
+                width: 100%;
+            }
+            
+            body {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            form {
+                padding: 20px;
+            }
+            
+            .form-header h1 {
+                font-size: 1.5rem;
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .formulaire {
+                flex-direction: column;
+            }
+            
+            .btn-retour {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="retour">
+            <a href="Home.html" class="btn-retour">
+                <i class="fa-solid fa-arrow-left"></i> Back to home
+            </a>
+        </div>
+        
+        <form action="#" method="post">
+            <div class="form-header">
+                <h1><i class="fa-solid fa-cart-shopping"></i> Order Form</h1>
+                <p class="subtitle">Fill out this form to place your order</p>
+            </div>
+            
+            <div class="envellope">
+                <div class="first form-section">
+                    <h2><i class="fa-solid fa-user"></i>Personal Information</h2>
+                    
+                    <div class="input-group">
+                        <label for="name"><i class="fa-solid fa-user"></i> Your name</label>
+                        <div class="input-icon">
+                            <input type="text" id="name" name="name" required placeholder="enter your full name">
+                            <i class="fa-solid fa-circle-check validation-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="order"><i class="fa-solid fa-utensils"></i> Your order</label>
+                        <div class="input-icon">
+                            <input type="text" id="order" name="order" required placeholder="what would u like de eat ?">
+                            <i class="fa-solid fa-circle-check validation-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="many"><i class="fa-solid fa-hashtag"></i> Quantity</label>
+                        <div class="input-icon">
+                            <input type="number" id="many" name="many" min="1" required placeholder="how many ?">
+                            <i class="fa-solid fa-circle-check validation-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="adresse"><i class="fa-solid fa-location-dot"></i> Your adress</label>
+                        <div class="textarea-icon">
+                            <textarea id="adresse" name="adresse" required placeholder="Your delivery adress"></textarea>
+                            <i class="fa-solid fa-circle-check validation-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="second form-section">
+                    <h2><i class="fa-solid fa-file-lines"></i> Additional Details</h2>
+                    
+                    <div class="input-group">
+                        <label for="number"><i class="fa-solid fa-phone"></i> Your number</label>
+                        <div class="input-icon">
+                            <input type="tel" id="number" name="number" required placeholder="Your phone number please">
+                            <i class="fa-solid fa-circle-check validation-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="food"><i class="fa-solid fa-plus-circle"></i> Suppléments</label>
+                        <div class="input-icon">
+                            <input type="text" id="food" name="food" placeholder="Add or edit your order">
+                            <i class="fa-solid fa-circle-info info-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="date"><i class="fa-solid fa-calendar-days"></i> Date and hour</label>
+                        <div class="input-icon">
+                            <input type="datetime-local" id="date" name="date">
+                            <i class="fa-solid fa-clock clock-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="message"><i class="fa-solid fa-message"></i> Your message</label>
+                        <div class="textarea-icon">
+                            <textarea id="message" name="message" placeholder="  special instructions, allergic etc."></textarea>
+                            <i class="fa-solid fa-circle-info info-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="formulaire">
+                <button type="submit" class="btn-submit">
+                    <i class="fa-solid fa-paper-plane"></i> Order now
+                </button>
+                <button type="button" class="btn-cancel">
+                    <a href="Home.html"><i class="fa-solid fa-xmark"></i> Cancel</a>
+                </button>
+            </div>
+            
+            <div class="form-footer">
+                <p><i class="fa-solid fa-shield"></i> Your information is secure and will not be shared</p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

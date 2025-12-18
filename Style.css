@@ -489,10 +489,10 @@ h2 span{
 }
 .boutton2 button{
     padding: 5px 20px;
-    background-image: radial-gradient(var(--color-secondary),rgb(109, 50, 50));
+    background: linear-gradient(to right,#073e8a, #4a6fa5);
     width: 150px;
     aspect-ratio: 1/0.25;
-    border-radius: 20px;
+    border-radius: 4px;
     border: none;
     color: white;
     text-transform: uppercase;
@@ -725,7 +725,7 @@ section h1{
     transform: rotateZ(35deg);
 } 
 .image{
-    width: 15vw;
+    width: 100%;
     height: 20vh;
 }
 @keyframes spin {
@@ -878,19 +878,19 @@ footer {
     font-weight: bold;
 }
 #facebook {
-    color: #0491fd;
+    color: var(--color-secondary);
     font-size: 28px;
 }
 #linkedin{
-    color: #048ffa;
+    color: var(--color-secondary);
     font-size: 28px;
 }
 #instagram {
-    color: #FFD43B;
+    color: #f3bf05;
     font-size: 28px;
 }
 #tiktok{
-    color: rgb(18, 18, 18);
+    color: #f3bf05;
     font-size: 28px;
 }
 
@@ -1015,6 +1015,7 @@ footer {
     .coms1 {
         min-width: 100%;
         margin-bottom: 20px;
+        height: auto;
     }
     .footer-container {
         grid-template-columns: repeat(2, 1fr);
@@ -1146,7 +1147,8 @@ footer {
         width: 50px;
     }
     .partone, .parttwo1 {
-        padding: 20px 15px;
+        /* padding: 20px 15px; */
+         padding: 20px 15px;
     }
     .subtitle {
         width: 95%;
@@ -1155,6 +1157,9 @@ footer {
     .bouttonimage button {
         width: 40%;
     }
+    .coms{
+        height: 20vh;
+        margin: 0;   /* code ajouter this */
     .banner .slider {
         width: 120px;
         height: 160px;
@@ -1170,7 +1175,9 @@ footer {
         bottom: 60px;
     }
     .middle-text {
-        font-size: 1.3em;
+        font-size: 0.8em;
+        padding-bottom: 35%;
+       
     }
     footer {
         padding: 100px 15px 30px 15px;
@@ -1183,6 +1190,7 @@ footer {
         font-size: 2rem;
         margin-bottom: 15%;
     }
+}
 }
 
 /* Grands écrans (plus de 1440px) */
@@ -1211,6 +1219,11 @@ footer {
     .pizza {
         font-size: 100px;
         margin-top: -15px;
+    }
+    .middle-text {
+        font-size: 0.3em;
+        padding-bottom: 15%;
+       
     }
     .slice {
         width: 150px;
@@ -1243,9 +1256,14 @@ footer {
         overflow-x: hidden;
         width: 100%;
     }
-    header, .partone, .parttwo, .parttwo1, .contenu2, .banner, footer {
+    header, .partone, .parttwo, .contenu2, .banner, footer {
         width: 100%;
         max-width: 100vw;
         box-sizing: border-box;
     }
+    .parttwo1{
+        width: 80%;
+    }
+
+    
 }
